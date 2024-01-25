@@ -8,5 +8,8 @@
 4. Insert a date in the MMMM-MM-DD format
 5. Click apply!
 
+## Preview
+![Preview](preview.png)
+
 
 
