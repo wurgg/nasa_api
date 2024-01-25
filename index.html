@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NASA API</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <script src='api.js'></script>
+</head>
+
+<body onload="getData('planetary/apod')">
+    <div class="wrapper">
+        <div id="menu" class="nes-container with-title is-centered">
+            <p class="title">NASA</p>
+            <button type="button" class="nes-btn is-primary" onclick="getData('planetary/apod')">Picture of the
+                Day</button>
+            <button type="button" class="nes-btn is-success" onclick="alert('not yet implemented')">Near Earth
+                Objects</button>
+            <button type="button" class="nes-btn is-warning" onclick="alert('not yet implemented')">Mars Weather
+                Service</button>
+        </div>
+
+        <div id="filter" class="nes-container with-title">
+            <p class="title">Filter</p>
+            <label for="dateInput">Date (YYYY-MM-DD)</label>
+            <div class="nes-field">
+                <div id="date">
+                    <input type="text" id="dateInput" class="nes-input is-success" value="2020-02-07">
+                    <input type="text" id="apiKey" class="nes-input is-success" value="API_KEY_HERE">
+                </div>
+                <button type="button" class="nes-btn" onclick="getData('planetary/apod')">Apply</button>
+            </div>
+        </div>
+
+        <div id="details">
+            <div class="lists">
+                <section class="message -left">
+                    <!-- Balloon -->
+                    <div class="nes-balloon from-left" id="explanation">
+                        <div>
+                            <span id="details_title"></span>
+                            <span id="details_date"></span>
+                        </div>
+                        <br>
+                        <div id="exp_txt">Please enter a valid NASA API key!</div>
+                    </div>
+                    <i class="nes-octocat animate"></i>
+                </section>
+            </div>
+        </div>
+
+        <div id="content" class="nes-container with-title is-dark">
+            <p class="title">Picture of the day</p>
+        </div>
+    </div>
+</body>
+
+</html>
